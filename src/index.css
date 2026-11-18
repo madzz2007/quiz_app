@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --ink: #1B2A4A;
+  --ink-light: #3E5372;
+  --chalkboard: #2F4F46;
+  --chalkboard-dark: #253F38;
+  --paper: #FAF6EC;
+  --card: #FFFFFF;
+  --ledger: #C9BFA5;
+  --amber: #E3A73B;
+  --amber-dark: #C98A22;
+  --coral: #C9573B;
+  --chalk-white: #F5F1E6;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.ledger-row {
+  border-bottom: 1px solid var(--ledger);
+}
+.ledger-row:last-child {
+  border-bottom: none;
+}
+
+.tab-underline {
+  position: relative;
+}
+.tab-underline.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 2px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
